@@ -4,12 +4,10 @@ import React, { Component } from 'react';
 class FilteredFruitList extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       items: []
     };
   }
-
   componentDidMount() {
     fetch('/api/fruit')
       .then(response => response.json())
@@ -24,5 +22,4 @@ class FilteredFruitList extends Component {
     );
   }
 }
-
 export default FilteredFruitList;

@@ -3,20 +3,20 @@ import React from 'react';
 import Filter from './Filter';
 import FilteredFruitList from './FilteredFruitList.js';
 
-const FruitBasket = ({ fruit, filters, currentFilter, onUpdateFilter }) => 
+const FruitBasket = ({ fruit, filters, firstFilter, onUpdateFilter }) => 
   <div className="fruit-basket">
     <Filter
       filters={filters}
       handleChange={onUpdateFilter} />
     <FilteredFruitList
       fruit={fruit}
-      filter={currentFilter} />
+      filter={firstFilter} />
   </div>;
 
 FruitBasket.defaultProps = {
   fruit: [],
   filters: [],
-  currentFilter: null,
+  firstFilter: null,
   updateFilterCallback: () => {}
 };
 

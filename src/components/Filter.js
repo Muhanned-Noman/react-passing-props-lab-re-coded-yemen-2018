@@ -7,7 +7,6 @@ const Filter = ({ filters, handleChange }) =>
       <option key={filter} value={filter}>{filter}</option>
     )}
   </select>;
-
 Filter.defaultProps = {
   filters: [],
   handleChange: function() {}

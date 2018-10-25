@@ -34,7 +34,7 @@ class App extends Component {
 
   updateFilter = event => {
     console.log('update filter to: ', event.target.value);
-    this.setState({ currentFilter: event.target.value });
+    this.setState({firstFilter: event.target.value });
   }
 
   render() {
@@ -42,7 +42,7 @@ class App extends Component {
       <FruitBasket
         fruit={this.state.fruit}
         filters={this.state.filters}
-        currentFilter={this.state.currentFilter}
+        firstFilter={this.state.firstFilter}
         onUpdateFilter={this.updateFilter} 
       />
     );
